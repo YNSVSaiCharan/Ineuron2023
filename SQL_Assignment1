@@ -30,3 +30,21 @@ Q10)
 Ans)
 (select city,length(city) as citylen from station order by citylen,city limit 1)union
 (select city,length(city) as citylen from station order by citylen desc,city limit 1);
+
+Q11)
+Ans)select distinct city from station where city regexp '^[aeiou]';
+
+Q12)
+Ans)select distinct city from station where city regexp '[aeiou]$';
+
+Q13)
+Ans)select distinct city from station where city not  regexp '^[aeiou]';
+
+Q14)
+Ans)select distinct city from station where city not  regexp '[aeiou]$';
+
+Q15)
+Ans)select distinct city from station where city not  regexp '^[aeiou]' or city not  regexp '[aeiou]$';
+
+Q16)
+Ans)select distinct city from station where city not  regexp '^[aeiou]' and city not  regexp '[aeiou]$';
